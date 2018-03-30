@@ -19,6 +19,7 @@
 		63C019F31C58E4AD001F4187 /* note5.wav in Resources */ = {isa = PBXBuildFile; fileRef = 63C019EC1C58E4AD001F4187 /* note5.wav */; };
 		63C019F41C58E4AD001F4187 /* note6.wav in Resources */ = {isa = PBXBuildFile; fileRef = 63C019ED1C58E4AD001F4187 /* note6.wav */; };
 		63C019F51C58E4AD001F4187 /* note7.wav in Resources */ = {isa = PBXBuildFile; fileRef = 63C019EE1C58E4AD001F4187 /* note7.wav */; };
+		CE2D29A7206E7D68005BF6E4 /* UIButtonExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2D29A6206E7D68005BF6E4 /* UIButtonExt.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		63C019EC1C58E4AD001F4187 /* note5.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = note5.wav; sourceTree = "<group>"; };
 		63C019ED1C58E4AD001F4187 /* note6.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = note6.wav; sourceTree = "<group>"; };
 		63C019EE1C58E4AD001F4187 /* note7.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = note7.wav; sourceTree = "<group>"; };
+		CE2D29A6206E7D68005BF6E4 /* UIButtonExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExt.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 			children = (
 				63C019C81C58DF76001F4187 /* AppDelegate.swift */,
 				63C019CA1C58DF76001F4187 /*  VIewController.swift */,
+				CE2D29A6206E7D68005BF6E4 /* UIButtonExt.swift */,
 				63C019CC1C58DF76001F4187 /* Main.storyboard */,
 				63C019CF1C58DF76001F4187 /* Assets.xcassets */,
 				63C019D11C58DF76001F4187 /* LaunchScreen.storyboard */,
@@ -173,6 +176,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				63C019CB1C58DF76001F4187 /*  VIewController.swift in Sources */,
+				CE2D29A7206E7D68005BF6E4 /* UIButtonExt.swift in Sources */,
 				63C019C91C58DF76001F4187 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
