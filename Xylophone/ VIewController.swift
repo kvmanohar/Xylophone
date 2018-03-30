@@ -8,6 +8,7 @@
 
 import UIKit
 import AVFoundation
+import AudioToolbox
 
 class ViewController: UIViewController{
     
@@ -20,22 +21,35 @@ class ViewController: UIViewController{
 
     @IBAction func notePressed(_ sender: UIButton) {
         
-        let url = Bundle.main.url(forResource: "note\(sender.tag)", withExtension: "wav")!
+//        //Playing sound using AVFoundation classs
+//        if let url = Bundle.main.url(forResource: "note\(sender.tag)", withExtension: "wav") {
+//
+//            do {
+//                sender.animateShake()
+//                audioPlayer = try AVAudioPlayer(contentsOf: url)
+//                guard let player = audioPlayer else { return }
+//                try? AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryAmbient)
+//                try? AVAudioSession.sharedInstance().setActive(true)
+//
+//                player.prepareToPlay()
+//                player.play()
+//
+//            } catch let error as NSError {
+//                print(error.localizedDescription)
+//            }
+//
+//        }
         
-        do {
-            
+        //Playing sound uising AudioToolbox - Sounds not longer than 30sec.
+        if let soundURL = Bundle.main.url(forResource: "note\(sender.tag)", withExtension: "wav") {
             sender.animateShake()
-            audioPlayer = try AVAudioPlayer(contentsOf: url)
-            guard let player = audioPlayer else { return }
-            try? AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryAmbient)
-            try? AVAudioSession.sharedInstance().setActive(true)
-    
-            player.prepareToPlay()
-            player.play()
-
-        } catch let error as NSError {
-            print(error.localizedDescription)
+            var mySound: SystemSoundID = 0
+            AudioServicesCreateSystemSoundID(soundURL as CFURL, &mySound)
+            AudioServicesPlaySystemSound(mySound)
+            
         }
+        
+
         
         
     }
